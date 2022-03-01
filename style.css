@@ -1,26 +1,74 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
 body {
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.keyboard {
-    display: inline-grid;
-    width: 600px;
-    height: 600px;
-    grid-template-columns:  repeat(4, 1fr);
-    gap: 3px;
-    color: white;
+    padding: 10px;
 }
 .item {
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 15px;
     background-color: rgb(38, 38, 41);
     cursor: pointer;
+    
+    box-shadow: 4px 4px 3px rgba(87, 87, 87, 0.445);
 }
 .item:hover {
     background-color: rgb(75, 75, 78);
+   
+}
+.keyboard_conteiner {
+    display: flex;
+    width: 100vw;
+    height: 450px;
+    color: white;
+}
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    margin-right: 20px;
+}
+
+.key9 {
+    grid-column: 14 / 16;
+    grid-row: 2 / 3;
+}
+.key10 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+.key44 {
+    grid-row: 3 / 5;
+    grid-column: 15 / 16;
+}
+.key45 {
+    grid-row: 4 / 5;
+    grid-column: 1 / 3; 
+}
+.key77 {
+    grid-row: 6 / 7;
+    grid-column: 5 / 11; 
+}
+
+.up_arrow {
+    width: 100%;
+    border-bottom: solid 1px gray;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 3px;
+    color: white;
 }
 .item12 {
     grid-row: 3 / 5; 
